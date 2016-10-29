@@ -13,7 +13,7 @@ class Main extends React.Component {
   }
   handleSubmit = (e) => {
     e.preventDefault()
-    Relay.Store.update(
+    Relay.Store.commitUpdate(
       new CreateLinkMutation({
         title: this.refs.newTitle.value,
         url: this.refs.newUrl.value,
